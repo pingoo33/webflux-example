@@ -1,0 +1,9 @@
+spring:
+  jwt:
+    secret-key: cc0bbde2-3cac-4e4b-a574-1060f8523b7f
+    access-token:
+      name: "access-token"
+      expire-seconds: 2592000000
+    refresh-token:
+      name: "refresh-token"
+      expire-seconds: 7776000000

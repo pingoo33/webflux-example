@@ -1,0 +1,11 @@
+version: "3"
+services:
+  webflux_example_database:
+    container_name: webflux_example_db
+    image: postgres:14
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: "webflux_example_db"
+      POSTGRES_USER: "webflux_example_user"
+      POSTGRES_PASSWORD: "webflux_example_password"

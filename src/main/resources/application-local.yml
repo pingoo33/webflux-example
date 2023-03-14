@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  config:
+    import: classpath:auth-config.yml
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/webflux_example_db
+    username: webflux_example_user
+    password: webflux_example_password
+    pool:
+      max-size: 100
+
+logging:
+  level:
+    org.springframework.r2dbc.core: debug
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    disable-swagger-default-url: true
+    display-request-duration: true
+    operationsSorter: alpha
